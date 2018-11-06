@@ -1,0 +1,66 @@
+# Created by newuser for 5.6.2
+
+# Check if zplug is installed
+if [[ ! -d ~/.zplug ]]; then
+    curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh | cat
+fi
+
+# Check if tilix color scheme is installed
+if [[ ! -f ~/.config/tilix/schemes/base16-atelier-forest.json ]]; then
+    mkdir -p ~/.config/tilix/schemes
+    cd ~/.config/tilix/schemes
+    {
+        wget https://raw.githubusercontent.com/karlding/base16-tilix/master/tilix/base16-atelier-forest.json 2>&1 | grep -i "saved"
+    }
+    cd ~
+fi
+
+source ~/.zplug/init.zsh
+
+# Auto-update
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+
+# Plugins 
+zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-syntax-highlighting"
+zplug "plugins/git",   from:oh-my-zsh
+zplug "plugins/docker",   from:oh-my-zsh
+zplug "plugins/docker-compose",   from:oh-my-zsh
+zplug "plugins/command-not-found",   from:oh-my-zsh
+zplug "plugins/colored-man-pages",   from:oh-my-zsh
+zplug "plugins/taskwarrior",   from:oh-my-zsh
+zplug "plugins/rand-quote",   from:oh-my-zsh
+zplug "robbyrussell/oh-my-zsh",   use:lib/history.zsh, from:github, as:plugin
+zplug "MichaelAquilina/zsh-you-should-use"
+
+# Theme
+zplug "geometry-zsh/geometry"
+GEOMETRY_PROMPT_PREFIX=""
+
+# Install packages that have not been installed yet
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    else
+        echo
+    fi
+fi
+
+zplug load # --verbose to see loaded modules
+
+# Aliases
+alias nv=nvim
+
+# Tab highlighting
+zstyle ':completion:*' menu select
+# Color tab highlighting
+eval "$(dircolors)"
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+# Color the ls output
+alias ls='ls --color=auto'
+
+# Enable fuzzy searching
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
