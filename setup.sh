@@ -9,7 +9,10 @@ echo ---------------------------------------------
 pacman -Syu --noconfirm
 
 # Install AUR package manager
-sudo pacman -Sy yay
+pacman -S yay --noconfirm
+
+# Update yay
+yay -Syu --noconfirm
 
 # Install zsh
 pacman -S zsh --noconfirm
@@ -21,7 +24,7 @@ pacman -S zplug --noconfirm
 pacman -S neovim --noconfirm
 
 # Install python modules for neovim
-pip3 install neovim
+pip3 install neovim --yes
 
 # Install tilix
 pacman -S tilix --noconfirm 
@@ -37,7 +40,7 @@ fi
 
 # Install fonts and glyphs
 # Make sure to change to Nerd font in Tilix
-yay -Sy nerd-fonts-complete-mono-glyphs --noconfirm
+yay -S nerd-fonts-complete-mono-glyphs --noconfirm
 
 # Copy files to corresponding directories
 cp ./zsh/zshrc ~/.zshrc
