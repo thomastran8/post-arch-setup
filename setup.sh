@@ -30,7 +30,7 @@ xclip
 chsh -s $(which zsh)
 
 # Install python modules for neovim
-pip3 install neovim --yes
+pip3 install neovim --user
 
 # Install tilix color scheme;
 if [[ ! -f ~/.config/tilix/schemes/base16-atelier-plateau.json ]]; then
