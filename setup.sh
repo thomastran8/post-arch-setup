@@ -6,31 +6,31 @@ echo Shell script setup installer for Arch systems
 echo ---------------------------------------------
 
 # Update packages
-pacman -Syu --noconfirm
+sudo pacman -Syu --noconfirm
 
 # Install AUR package manager
-pacman -S yay --noconfirm
+sudo pacman -S yay --noconfirm
 
 # Update yay
 yay -Syu --noconfirm
 
 # Install zsh
-pacman -S zsh --noconfirm
+sudo pacman -S zsh --noconfirm
 
 # Install zplug
-pacman -S zplug --noconfirm
+sudo pacman -S zplug --noconfirm
 
 # Install neovim
-pacman -S neovim --noconfirm
+sudo pacman -S neovim --noconfirm
 
 # Install python modules for neovim
 pip3 install neovim --yes
 
 # Install tilix
-pacman -S tilix --noconfirm 
+sudo pacman -S tilix --noconfirm 
 
 # Install xclip for neovim clipboard
-pacman -S xclip --noconfirm
+sudo pacman -S xclip --noconfirm
 
 # Install tilix color scheme;
 if [[ ! -f ~/.config/tilix/schemes/base16-atelier-forest.json ]]; then
@@ -44,11 +44,13 @@ yay -S nerd-fonts-complete-mono-glyphs --noconfirm
 
 # Copy files to corresponding directories
 cp ./zsh/zshrc ~/.zshrc
+mkdir -p ~/.config/nvim
 cp ./neovim/init.vim ~/.config/nvim/init.vim
-dconf load /com/gexperts/Tilix/ < tilix.dconf
+dconf load /com/gexperts/Tilix/ < ./tilix/tilix.dconf
 
 # Install plugins
-chsh -s $(which zsh) # switch to shells
+chsh -s $(which zsh)    # default to zsh
+zsh                     # switch to shells
 zplug install
 nvim +'PlugInstall --sync' +qa;
 
