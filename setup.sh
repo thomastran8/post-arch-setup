@@ -17,7 +17,7 @@ while true; do
     read -p "Do you wish to update mirrorlists? " yn
     case $yn in
         [Yy]* ) sudo rankmirrors -f; break;;
-        [Nn]* ) exit;;
+        [Nn]* ) break;;
         * ) echo "Please answer yes or no.";;
     esac
 done
