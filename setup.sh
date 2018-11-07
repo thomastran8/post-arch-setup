@@ -13,7 +13,14 @@ if [[ $EUID -eq 0 ]]; then
 fi
 
 # Update mirrorlist
-sudo rankmirrors -f
+while true; do
+    read -p "Do you wish to update mirrorlists? " yn
+    case $yn in
+        [Yy]* ) sudo rankmirrors -f; break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
 
 # Update packages
 sudo pacman -Syu --noconfirm \
