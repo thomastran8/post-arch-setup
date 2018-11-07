@@ -33,7 +33,7 @@ chsh -s $(which zsh)
 pip3 install neovim --yes
 
 # Install tilix color scheme;
-if [[ ! -f ~/.config/tilix/schemes/base16-atelier-forest.json ]]; then
+if [[ ! -f ~/.config/tilix/schemes/base16-atelier-plateau.json ]]; then
     mkdir -p ~/.config/tilix/schemes
     wget https://raw.githubusercontent.com/karlding/base16-tilix/master/tilix/base16-atelier-plateau.json -O ~/.config/tilix/schemes/base16-atelier-plateau.json
 fi
