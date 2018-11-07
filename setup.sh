@@ -1,15 +1,16 @@
 #!/bin/sh
-
-# Manjaro setup installer
-echo ------------------------------------------------
-echo Shell script setup installer for Manjaro systems
-echo ------------------------------------------------
+# Please run script as super user!
+cat <<EOF
+------------------------------------------------
+Shell script setup installer for Manjaro systems
+------------------------------------------------
+EOF
 
 # Update mirrorlist
-sudo rankmirrors -f
+rankmirrors -f
 
 # Update packages
-sudo pacman -Syu --noconfirm \
+pacman -Syu --noconfirm \
 
 ### Install pacman applications here ###
 
@@ -36,6 +37,9 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 rm -rf yay
+
+# Switch to normal user
+su $SUDO_USER <<EOF
 
 # Update YAY
 yay -Syu --noconfirm \
@@ -73,11 +77,15 @@ zsh                     # switch to zsh
 zplug install
 nvim +'PlugInstall --sync' +qa;
 
+EOF
+
 ### Hotkeys
 # Ctrl+Alt+{h,j,k,l,u} - tile windows
 # Ctrl+Alt+T           - terminal
 ###
 
-echo ------------------------------------------------
-echo Shell script setup installer completed
-echo ------------------------------------------------
+cat <<EOF
+------------------------------------------------
+Shell script setup installer completed
+------------------------------------------------
+EOF
