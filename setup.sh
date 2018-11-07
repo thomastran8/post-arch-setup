@@ -26,13 +26,11 @@ tilix \
 # Install xclip for neovim clipboard
 xclip
 
-chsh -s $(which zsh)    # default to zsh
+# Default to zsh
+chsh -s $(which zsh)
 
 # Install python modules for neovim
 pip3 install neovim --yes
-
-# Update yay
-yay -Syu --noconfirm
 
 # Install tilix color scheme;
 if [[ ! -f ~/.config/tilix/schemes/base16-atelier-forest.json ]]; then
@@ -42,7 +40,7 @@ fi
 
 # Install fonts and glyphs
 # Make sure to change to Nerd font in Tilix
-yay -S nerd-fonts-complete-mono-glyphs --noconfirm
+yay -Syu nerd-fonts-complete-mono-glyphs --noconfirm
 
 # Copy files to corresponding directories
 cp ./zsh/zshrc ~/.zshrc
