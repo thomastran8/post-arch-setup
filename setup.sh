@@ -5,6 +5,9 @@ echo ---------------------------------------------
 echo Shell script setup installer for Arch systems
 echo ---------------------------------------------
 
+# Update mirrorlist
+sudo rankmirrors -f
+
 # Update packages
 sudo pacman -Syu --noconfirm \
 
