@@ -1,16 +1,22 @@
 #!/bin/sh
-# Please run script as super user!
+
 cat <<EOF
 ------------------------------------------------
 Shell script setup installer for Manjaro systems
 ------------------------------------------------
 EOF
 
+# Check if running as root
+if [[ $EUID -eq 0 ]]; then
+        echo "Do not run as root."
+        exit
+fi
+
 # Update mirrorlist
-rankmirrors -f
+sudo rankmirrors -f
 
 # Update packages
-pacman -Syu --noconfirm \
+sudo pacman -Syu --noconfirm \
 
 ### Install pacman applications here ###
 
@@ -32,14 +38,11 @@ xclip
 ### End pacman ###
 
 # Install AUR package manager
-git clone https://aur.archlinux.org/yay.git /tmp/yay
-cd /tmp/yay
+git clone https://aur.archlinux.org/yay.git ~/yay
+cd ~/yay
 makepkg -si
 cd -
-rm -rf yay
-
-# Switch to normal user
-su $SUDO_USER <<EOF
+rm -rf ~/yay
 
 # Update YAY
 yay -Syu --noconfirm \
@@ -76,8 +79,6 @@ chsh -s $(which zsh)
 zsh                     # switch to zsh
 zplug install
 nvim +'PlugInstall --sync' +qa;
-
-EOF
 
 ### Hotkeys
 # Ctrl+Alt+{h,j,k,l,u} - tile windows
