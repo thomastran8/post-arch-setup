@@ -6,36 +6,38 @@ echo Shell script setup installer for Arch systems
 echo ---------------------------------------------
 
 # Update packages
-sudo pacman -Syu --noconfirm
+sudo pacman -Syu --noconfirm \
 
 # Install AUR package manager
-sudo pacman -S yay --noconfirm
-
-# Update yay
-yay -Syu --noconfirm
+yay \
 
 # Install zsh
-sudo pacman -S zsh --noconfirm
+zsh \
 
 # Install zplug
-sudo pacman -S zplug --noconfirm
+zplug \
 
 # Install neovim
-sudo pacman -S neovim --noconfirm
+neovim \
+
+# Install tilix
+tilix \
+
+# Install xclip for neovim clipboard
+xclip
+
+chsh -s $(which zsh)    # default to zsh
 
 # Install python modules for neovim
 pip3 install neovim --yes
 
-# Install tilix
-sudo pacman -S tilix --noconfirm 
-
-# Install xclip for neovim clipboard
-sudo pacman -S xclip --noconfirm
+# Update yay
+yay -Syu --noconfirm
 
 # Install tilix color scheme;
 if [[ ! -f ~/.config/tilix/schemes/base16-atelier-forest.json ]]; then
     mkdir -p ~/.config/tilix/schemes
-    wget https://raw.githubusercontent.com/karlding/base16-tilix/master/tilix/base16-atelier-forest.json -OP ~/.config/tilix/schemes
+    wget https://raw.githubusercontent.com/karlding/base16-tilix/master/tilix/base16-atelier-plateau.json -O ~/.config/tilix/schemes/base16-atelier-plateau.json
 fi
 
 # Install fonts and glyphs
@@ -49,8 +51,7 @@ cp ./neovim/init.vim ~/.config/nvim/init.vim
 dconf load /com/gexperts/Tilix/ < ./tilix/tilix.dconf
 
 # Install plugins
-chsh -s $(which zsh)    # default to zsh
-zsh                     # switch to shells
+zsh                     # switch to zsh
 zplug install
 nvim +'PlugInstall --sync' +qa;
 
