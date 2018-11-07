@@ -26,6 +26,8 @@ tilix \
 # Install xclip for neovim clipboard
 xclip
 
+# Install more applications here
+
 # Default to zsh
 chsh -s $(which zsh)
 
@@ -38,9 +40,14 @@ if [[ ! -f ~/.config/tilix/schemes/base16-atelier-plateau.json ]]; then
     wget https://raw.githubusercontent.com/karlding/base16-tilix/master/tilix/base16-atelier-plateau.json -O ~/.config/tilix/schemes/base16-atelier-plateau.json
 fi
 
+# Update AUR
+yay -Syu --noconfirm \
+
 # Install fonts and glyphs
-# Make sure to change to Nerd font in Tilix
-yay -Syu nerd-fonts-complete-mono-glyphs --noconfirm
+nerd-fonts-complete-mono-glyphs \
+
+# Install vim-plug
+neovim-plug
 
 # Copy files to corresponding directories
 cp ./zsh/zshrc ~/.zshrc
@@ -52,8 +59,6 @@ dconf load /com/gexperts/Tilix/ < ./tilix/tilix.dconf
 zsh                     # switch to zsh
 zplug install
 nvim +'PlugInstall --sync' +qa;
-
-# Install more applications here
 
 ### Hotkeys
 # Ctrl+Alt+{h,j,k,l,u} - tile windows
