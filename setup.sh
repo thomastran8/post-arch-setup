@@ -23,9 +23,6 @@ sudo pacman -Syu --noconfirm \
 # Install zsh
 zsh \
 
-# Install zplug
-zplug \
-
 # Install neovim
 neovim \
 
@@ -48,6 +45,9 @@ rm -rf ~/yay
 yay -Syu --noconfirm \
 
 ### Install AUR applications here ###
+
+# Install zplug
+zplug \
 
 # Install fonts and glyphs
 nerd-fonts-complete-mono-glyphs \
