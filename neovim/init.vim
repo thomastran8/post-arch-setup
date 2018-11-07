@@ -16,11 +16,11 @@ Plug 'jiangmiao/auto-pairs'
 
 " Make sure neovim is installed with pip3 first
 if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
 endif
 let g:deoplete#enable_at_startup = 1
 
@@ -28,6 +28,9 @@ let g:deoplete#enable_at_startup = 1
 Plug 'artur-shaik/vim-javacomplete2'
 
 call plug#end()
+
+" Set airline icons
+let g:airline_powerline_fonts = 1
 
 " For base16 vim theme
 set termguicolors
@@ -40,4 +43,18 @@ set number
 
 " Set tabs to space
 set tabstop=4 shiftwidth=4 expandtab
+
+" Custom clipboard
+let g:clipboard = {
+            \    'name': 'xclip',
+            \    'copy': {
+            \       '*': 'xclip -selection primary',
+            \       '+': 'xclip -selection secondary',
+            \     },
+            \    'paste': {
+            \       '*': 'xclip -selection primary -o',
+            \       '+': 'xclip -selection secondary -o',
+            \    },
+            \    'cache_enabled': 1,
+            \}
 
