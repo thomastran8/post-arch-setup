@@ -32,10 +32,10 @@ xclip
 ### End pacman ###
 
 # Install AUR package manager
-cd ~
-git clone https://aur.archlinux.org/yay.git
-cd yay
+git clone https://aur.archlinux.org/yay.git /tmp/yay
+cd /tmp/yay
 makepkg -si
+cd -
 rm -rf yay
 
 # Switch to normal user
