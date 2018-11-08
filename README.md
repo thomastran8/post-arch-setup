@@ -32,7 +32,7 @@ There are several steps if you want to call it your own:
 
 10. Git add, commit, and push your changes to your forked repository. Your configurations are now saved. Enjoy!
 
-**Final Note** The setup.sh may had some errors with some vim plugins, make sure to run `:PlugInstall` in Neovim to correct any bad installs.
+**Final Note**: The setup.sh may had some errors with some vim plugins, make sure to run `:PlugInstall` in Neovim to correct any bad installs.
 
 ## Resources
 
