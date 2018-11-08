@@ -26,7 +26,7 @@ overwrite_files()
 
 # Overwrite files
 while true; do
-    read -p "Warning: System Configuration files will be overwritten
+    read -p "Warning: System configuration files will be overwritten
     Would you like to overwrite files? [y/n]: " yn
     case $yn in
         [Yy]* ) overwrite_files; break;;
