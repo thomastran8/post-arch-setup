@@ -14,7 +14,7 @@ fi
 
 # Update mirrorlist
 while true; do
-    read -p "Do you wish to update mirrorlists? " yn
+    read -p "Do you wish to update mirrorlists? [y/n]: " yn
     case $yn in
         [Yy]* ) sudo rankmirrors -f; break;;
         [Nn]* ) break;;
