@@ -80,7 +80,7 @@ pip3 install neovim --user
 zsh -c "source ~/.zshrc; zplug install; nvim +PlugInstall +qa;"
 
 # Uncomment colorscheme in neovim init
-sed -i "s/\"colorscheme/colorscheme/g" 
+sed -i "s/\"colorscheme/colorscheme/g" ~/.config/nvim/init.vim
 
 # Reload xfce4
 kill -9 $(pidof xfconfd)

@@ -60,10 +60,10 @@
         <value type="string" value="task manager"/>
         <value type="string" value="xfce terminal"/>
         <value type="string" value="msm notifier"/>
+        <value type="string" value="pamac-tray"/>
         <value type="string" value="clipman"/>
         <value type="string" value="networkmanager applet"/>
         <value type="string" value="xfce4-power-manager"/>
-        <value type="string" value="pamac-tray"/>
       </property>
     </property>
     <property name="plugin-3" type="string" value="tasklist">

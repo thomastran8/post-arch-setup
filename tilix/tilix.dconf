@@ -18,7 +18,7 @@ badge-font='DejaVuSansMonoForPowerline Nerd Font 12'
 [/]
 quake-specific-monitor=0
 sidebar-on-right=false
-terminal-title-style='none'
+terminal-title-style='small'
 theme-variant='dark'
 session-name=''
 control-scroll-zoom=false
