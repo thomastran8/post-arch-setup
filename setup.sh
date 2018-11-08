@@ -77,7 +77,7 @@ neovim-plug-git
 pip3 install neovim --user
 
 # Install plugins
-zsh -c "source ~/.zshrc; zplug install; nvim +UpdateRemotePlugins +PlugInstall +qa;"
+zsh -c "source ~/.zshrc; zplug install; nvim +PlugInstall +qa;"
 
 # Uncomment colorscheme in neovim init
 sed -i "s/#colorscheme/colorscheme/g" 
