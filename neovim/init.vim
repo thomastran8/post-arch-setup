@@ -14,6 +14,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'raimondi/delimitmate'
 Plug 'jiangmiao/auto-pairs'
 Plug 'suan/vim-instant-markdown'
+Plug 'easymotion/vim-easymotion'
 
 " Make sure neovim is installed with pip3 first
 if has('nvim')
