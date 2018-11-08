@@ -1,5 +1,5 @@
 # shell-setup
-Script that sets up zsh, neovim, and tilix configurations on a newly installed Manjaro system or backs up an existing one.
+Script that sets up zsh, neovim, and tilix configurations on a newly installed XFCE desktop environment or backs up an existing one.
 
 ## Usage
 Run setup.sh to deploy your configurations
