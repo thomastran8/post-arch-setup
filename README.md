@@ -17,12 +17,13 @@ There are several steps if you want to call it your own:
 
 4. Run the setup.sh <br>
 **Note**: If you have Xfce, Tilix, Zsh, and Neovim already configured on your computer, you can skip this step and steps 5-8. <br>
+**Note**: Occasionally "Whiskers Menu" will stop and ask to be restarted. Choose the option to restart.
 
 5. Configure Xfce desktop -- keyboard shortcut, windows tiling, etc.
 
 6. Configure Tilix -- color scheme, shortcuts, etc. <br>
 **Note**: Type `tilix --preferences` if there is no gui options for opening up the settings -- I removed some of the gui in mine. <br>
-**Note**: Put your custom color scheme files in ~/.config/tilix/schemes if loading from file (A file isn't necessary, Tilix will save a color scheme without a file).
+**Note**: Put your custom color scheme files in `~/.config/tilix/schemes` if loading from file (A file isn't necessary, Tilix will save a color scheme without a file).
 
 7. Configure Zsh -- edit `~/.zshrc` -- add in your favorite Zsh plugins, setup aliases, etc. The Zsh plugin manager is Zplug.
 
