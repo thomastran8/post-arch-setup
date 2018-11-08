@@ -17,8 +17,8 @@ There are several steps if you want to call it your own:
 
 4. Run the setup.sh <br>
 **Note**: If you have Xfce, Tilix, Zsh, and Neovim already configured on your computer, you can skip this step and steps 5-8. <br>
-**Note**: Occasionally "Whiskers Menu" will stop and ask to be restarted. Choose the option to restart.
-**Note**: There is a portion during Zplug portion of the install where it hangs on `==> Installation finished successfully!`. The installation will continue after this. It hangs for about a minute, do not exit or press any keys during this time.
+**Note**: Occasionally "Whiskers Menu" will stop and ask to be restarted. Choose the option to restart. <br>
+**Note**: There is a portion during Zplug install where it hangs on `==> Installation finished successfully!`. The installation will continue after this. It hangs for about a minute, do not exit or press any keys during this time.
 
 5. Configure Xfce desktop -- keyboard shortcut, windows tiling, etc.
 
