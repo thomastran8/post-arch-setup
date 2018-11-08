@@ -59,9 +59,9 @@ cp -r ./shortcuts/xfce4 ~/.config/
 dconf load /com/gexperts/Tilix/ < ./tilix/tilix.dconf
 
 # Install plugins
-zsh                     # switch to zsh
-zplug install
-nvim +'PlugInstall --sync' +qa;
+#zsh                     # switch to zsh
+#zplug install
+#nvim +'PlugInstall --sync' +qa;
 
 # Default to zsh
 chsh -s $(which zsh)
