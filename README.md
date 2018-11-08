@@ -17,8 +17,8 @@ There are several steps if you want to call it your own:
 
 4. Run the setup.sh <br>
 **Note**: If you have Xfce, Tilix, Zsh, and Neovim already configured on your computer, you can skip this step and steps 5-8. <br>
-**Note**: Press enter for missing color schemes in neovim -- they will be added during plugin install.
-**Note**: Plugin install for neovim will generate a lot of errors and warning messages. Type `:qa` to exit.
+**Note**: Press enter for missing color schemes in neovim -- they will be added during plugin install. <br>
+**Note**: Plugin update and install for neovim will generate a lot of errors and warning messages. Type `:qa` to exit in both cases.
 
 5. Configure Xfce desktop -- keyboard shortcut, windows tiling, etc.
 
