@@ -13,6 +13,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'raimondi/delimitmate'
 Plug 'jiangmiao/auto-pairs'
+Plug 'suan/vim-instant-markdown'
 
 " Make sure neovim is installed with pip3 first
 if has('nvim')

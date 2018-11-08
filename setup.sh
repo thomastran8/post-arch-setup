@@ -21,6 +21,9 @@ dconf load /com/gexperts/Tilix/ < ./tilix/tilix.dconf
 mkdir -p ~/.config/tilix/schemes
 cp ./tilix/schemes/* ~/.config/tilix/schemes
 
+# Comment out colorscheme in neovim init
+sed -i "s/colorscheme/#colorscheme/g"
+
 # Update mirrorlist
 while true; do
     read -p "Do you wish to update mirrorlists? [y/n]: " yn
@@ -39,7 +42,8 @@ sudo pacman -Syu --noconfirm \
 zsh \
 neovim \
 tilix \
-xclip
+xclip \
+ranger
 
 # Install AUR package manager
 git clone https://aur.archlinux.org/yay.git ~/yay
@@ -52,13 +56,16 @@ rm -rf ~/yay
 yay -Syu --noconfirm \
 zplug \
 nerd-fonts-complete-mono-glyphs \
-neovim-plug
+neovim-plug-git
 
 # Install python modules for neovim
 pip3 install neovim --user
 
 # Install plugins
-zsh -c "source ~/.zshrc; zplug install; nvim -c 'UpdateRemotePlugins'; nvim -c 'PlugInstall';"
+zsh -c "source ~/.zshrc; zplug install; nvim +UpdateRemotePlugins +PlugInstall +qa;"
+
+# Uncomment colorscheme in neovim init
+sed -i "s/#colorscheme/colorscheme/g" 
 
 # Reload xfce4
 kill -9 $(pidof xfconfd)
