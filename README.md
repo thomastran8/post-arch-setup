@@ -1,5 +1,5 @@
 # shell-setup
-Personal configurations to setup and backup a zsh and neovim environment on Manjaro
+Script that sets up zsh, neovim, and tilix configurations on a newly installed Manjaro system or backs up an existing one.
 
 ## Usage
 Run setup.sh to deploy your configurations
