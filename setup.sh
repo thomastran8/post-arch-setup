@@ -12,17 +12,32 @@ if [[ $EUID -eq 0 ]]; then
         exit
 fi
 
-# Copy files to corresponding directories
-cp ./zsh/zshrc ~/.zshrc
-mkdir -p ~/.config/nvim
-cp ./neovim/init.vim ~/.config/nvim/init.vim
-cp -r ./shortcuts/xfce4 ~/.config/
-dconf load /com/gexperts/Tilix/ < ./tilix/tilix.dconf
-mkdir -p ~/.config/tilix/schemes
-cp ./tilix/schemes/* ~/.config/tilix/schemes
+overwrite_files()
+{
+    # Copy files to corresponding directories
+    cp ./zsh/zshrc ~/.zshrc
+    mkdir -p ~/.config/nvim
+    cp ./neovim/init.vim ~/.config/nvim/init.vim
+    cp -r ./shortcuts/xfce4 ~/.config/
+    dconf load /com/gexperts/Tilix/ < ./tilix/tilix.dconf
+    mkdir -p ~/.config/tilix/schemes
+    cp ./tilix/schemes/* ~/.config/tilix/schemes
+}
+
+# Overwrite files
+while true; do
+    read -p "Warning: System Configuration files will be overwritten
+    Would you like to overwrite files? [y/n]: " yn
+    case $yn in
+        [Yy]* ) overwrite_files; break;;
+        [Nn]* ) break;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+
 
 # Comment out colorscheme in neovim init
-sed -i "s/colorscheme/#colorscheme/g"
+sed -i "s/colorscheme/#colorscheme/g" ~/.config/nvim/init.vim
 
 # Update mirrorlist
 while true; do
