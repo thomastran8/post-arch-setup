@@ -26,23 +26,33 @@ There are several steps if you want to call it your own:
 **Note**: Type `tilix --preferences` if there is no gui options for opening up the settings -- I removed some of the gui in mine. <br>
 **Note**: Put your custom color scheme files in ~/.config/tilix/schemes if loading from file (A file isn't necessary, Tilix will save a color scheme without a file).
 
-7. Configure Zsh -- edit ~/.zshrc -- add in your favorite Zsh plugins, setup aliases, etc.
+7. Configure Zsh -- edit `~/.zshrc` -- add in your favorite Zsh plugins, setup aliases, etc. The Zsh plugin manager is Zplug.
 
-8. Configure Neovim --edit ~/.config/nvim/init.vim -- add in your favorite Vim plugins, setup Vim preferences, etc.
+8. Configure Neovim --edit `~/.config/nvim/init.vim` -- add in your favorite Vim plugins, setup Vim preferences, etc. The vim plugin manager is Vim-plug.
 
 9. Run backup.sh to backup all of your configurations.
 
 10. Git add, commit, and push your changes to your forked repository. Your configurations are now saved. Enjoy!
 
-## Where do I find resources to customize my configurations?
+## Resources
 
 ### Tilix
 https://github.com/karlding/base16-tilix
 
 ### Zsh
+https://wiki.archlinux.org/index.php/zsh
+
+https://github.com/zplug/zplug
+
 https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins
+
 https://github.com/unixorn/awesome-zsh-plugins
 
 ### Neovim
+https://github.com/neovim/neovim
+
+https://github.com/junegunn/vim-plug
+
 https://vimawesome.com/
+
 https://github.com/chriskempson/base16-vim
