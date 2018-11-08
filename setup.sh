@@ -24,45 +24,23 @@ done
 
 # Update packages
 sudo pacman -Syu --noconfirm \
-
-### Install pacman applications here ###
-
-# Install zsh
 zsh \
-
-# Install neovim
 neovim \
-
-# Install tilix
 tilix \
-
-# Install xclip for neovim clipboard
 xclip
-
-### End pacman ###
 
 # Install AUR package manager
 git clone https://aur.archlinux.org/yay.git ~/yay
 cd ~/yay
-makepkg -si
+makepkg -sic --noconfirm
 cd -
 rm -rf ~/yay
 
 # Update YAY
 yay -Syu --noconfirm \
-
-### Install AUR applications here ###
-
-# Install zplug
 zplug \
-
-# Install fonts and glyphs
 nerd-fonts-complete-mono-glyphs \
-
-# Install vim-plug
 neovim-plug
-
-### End AUR ###
 
 # Install python modules for neovim
 pip3 install neovim --user
