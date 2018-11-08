@@ -55,16 +55,16 @@ fi
 cp ./zsh/zshrc ~/.zshrc
 mkdir -p ~/.config/nvim
 cp ./neovim/init.vim ~/.config/nvim/init.vim
-cp ./shortcuts/xfce4-keyboard-shortcuts.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
+cp -r ./shortcuts/xfce4 ~/.config/
 dconf load /com/gexperts/Tilix/ < ./tilix/tilix.dconf
-
-# Default to zsh
-chsh -s $(which zsh)
 
 # Install plugins
 zsh                     # switch to zsh
 zplug install
 nvim +'PlugInstall --sync' +qa;
+
+# Default to zsh
+chsh -s $(which zsh)
 
 cat <<EOF
 ------------------------------------------------
