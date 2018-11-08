@@ -63,6 +63,10 @@ dconf load /com/gexperts/Tilix/ < ./tilix/tilix.dconf
 #zplug install
 #nvim +'PlugInstall --sync' +qa;
 
+# Reload xfce4
+kill -9 $(pidof xfconfd)
+kill -9 $(pidof xfsettingsd)
+
 # Default to zsh
 chsh -s $(which zsh)
 
