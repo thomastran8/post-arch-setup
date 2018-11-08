@@ -22,6 +22,9 @@ while true; do
     esac
 done
 
+# Update colors for pacman
+sudo sed -i 's/#Color/Color/g' /etc/pacman.conf
+
 # Update pacman and install packages
 sudo pacman -Syu --noconfirm \
 zsh \
