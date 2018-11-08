@@ -22,7 +22,7 @@ while true; do
     esac
 done
 
-# Update packages
+# Update pacman and install packages
 sudo pacman -Syu --noconfirm \
 zsh \
 neovim \
@@ -36,7 +36,7 @@ makepkg -sic --noconfirm
 cd -
 rm -rf ~/yay
 
-# Update YAY
+# Update YAY and install packages
 yay -Syu --noconfirm \
 zplug \
 nerd-fonts-complete-mono-glyphs \
