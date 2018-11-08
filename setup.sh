@@ -12,6 +12,13 @@ if [[ $EUID -eq 0 ]]; then
         exit
 fi
 
+# Copy files to corresponding directories
+cp ./zsh/zshrc ~/.zshrc
+mkdir -p ~/.config/nvim
+cp ./neovim/init.vim ~/.config/nvim/init.vim
+cp -r ./shortcuts/xfce4 ~/.config/
+dconf load /com/gexperts/Tilix/ < ./tilix/tilix.dconf
+
 # Update mirrorlist
 while true; do
     read -p "Do you wish to update mirrorlists? [y/n]: " yn
@@ -53,13 +60,6 @@ if [[ ! -f ~/.config/tilix/schemes/base16-atelier-forest.json ]]; then
     mkdir -p ~/.config/tilix/schemes
     wget https://raw.githubusercontent.com/karlding/base16-tilix/master/tilix/base16-atelier-forest.json -O ~/.config/tilix/schemes/base16-atelier-forest.json
 fi
-
-# Copy files to corresponding directories
-cp ./zsh/zshrc ~/.zshrc
-mkdir -p ~/.config/nvim
-cp ./neovim/init.vim ~/.config/nvim/init.vim
-cp -r ./shortcuts/xfce4 ~/.config/
-dconf load /com/gexperts/Tilix/ < ./tilix/tilix.dconf
 
 # Install plugins
 zsh -c "source ~/.zshrc; zplug install; nvim -c 'UpdateRemotePlugins'; nvim -c 'PlugInstall';"
