@@ -30,17 +30,17 @@ tilix \
 xclip
 
 # Install AUR package manager
-git clone https://aur.archlinux.org/yay.git ~/yay
-cd ~/yay
-makepkg -sic --noconfirm
-cd -
-rm -rf ~/yay
-
-# Update YAY and install packages
-yay -Syu --noconfirm \
-zplug \
-nerd-fonts-complete-mono-glyphs \
-neovim-plug
+#git clone https://aur.archlinux.org/yay.git ~/yay
+#cd ~/yay
+#makepkg -sic --noconfirm
+#cd -
+#rm -rf ~/yay
+#
+## Update YAY and install packages
+#yay -Syu --noconfirm \
+#zplug \
+#nerd-fonts-complete-mono-glyphs \
+#neovim-plug
 
 # Install python modules for neovim
 pip3 install neovim --user
@@ -59,9 +59,7 @@ cp -r ./shortcuts/xfce4 ~/.config/
 dconf load /com/gexperts/Tilix/ < ./tilix/tilix.dconf
 
 # Install plugins
-#zsh                     # switch to zsh
-#zplug install
-#nvim +'PlugInstall --sync' +qa;
+zsh -c 'zplug install; nvim +'PlugInstall --sync' +qa;' # switch to zsh
 
 # Reload xfce4
 kill -9 $(pidof xfconfd)
