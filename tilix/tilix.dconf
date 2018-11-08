@@ -6,6 +6,7 @@ palette=['#1B1918', '#F22C40', '#7B9726', '#C38418', '#407EE7', '#6666EA', '#3D9
 badge-color='#AC7EA8'
 badge-color-set=false
 badge-use-system-font=false
+show-scrollbar=false
 cursor-colors-set=false
 highlight-colors-set=false
 use-theme-colors=false

@@ -55,6 +55,7 @@ fi
 cp ./zsh/zshrc ~/.zshrc
 mkdir -p ~/.config/nvim
 cp ./neovim/init.vim ~/.config/nvim/init.vim
+cp ./shortcuts/xfce4-keyboard-shortcuts.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
 dconf load /com/gexperts/Tilix/ < ./tilix/tilix.dconf
 
 # Default to zsh
@@ -64,11 +65,6 @@ chsh -s $(which zsh)
 zsh                     # switch to zsh
 zplug install
 nvim +'PlugInstall --sync' +qa;
-
-### Hotkeys
-# Ctrl+Alt+{h,j,k,l,u} - tile windows
-# Ctrl+Alt+T           - terminal
-###
 
 cat <<EOF
 ------------------------------------------------
