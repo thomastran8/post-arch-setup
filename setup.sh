@@ -59,7 +59,7 @@ cp -r ./shortcuts/xfce4 ~/.config/
 dconf load /com/gexperts/Tilix/ < ./tilix/tilix.dconf
 
 # Install plugins
-zsh -c "source ~/.zshrc; zplug install; nvim -c 'UpdateRemotePlugins' -c 'sleep 2' -c ':qa'; nvim -c 'PlugInstall' -c 'sleep 20' -c 'qa';" # switch to zsh
+zsh -c "source ~/.zshrc; zplug install; nvim -c 'UpdateRemotePlugins'; nvim -c 'PlugInstall';"
 
 # Reload xfce4
 kill -9 $(pidof xfconfd)
