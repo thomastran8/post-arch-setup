@@ -18,6 +18,8 @@ mkdir -p ~/.config/nvim
 cp ./neovim/init.vim ~/.config/nvim/init.vim
 cp -r ./shortcuts/xfce4 ~/.config/
 dconf load /com/gexperts/Tilix/ < ./tilix/tilix.dconf
+mkdir -p ~/.config/tilix/schemes
+cp ./tilix/schemes/* ~/.config/tilix/schemes
 
 # Update mirrorlist
 while true; do
@@ -54,12 +56,6 @@ neovim-plug
 
 # Install python modules for neovim
 pip3 install neovim --user
-
-# Install tilix color scheme;
-if [[ ! -f ~/.config/tilix/schemes/base16-atelier-forest.json ]]; then
-    mkdir -p ~/.config/tilix/schemes
-    wget https://raw.githubusercontent.com/karlding/base16-tilix/master/tilix/base16-atelier-forest.json -O ~/.config/tilix/schemes/base16-atelier-forest.json
-fi
 
 # Install plugins
 zsh -c "source ~/.zshrc; zplug install; nvim -c 'UpdateRemotePlugins'; nvim -c 'PlugInstall';"
