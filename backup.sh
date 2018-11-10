@@ -13,6 +13,7 @@ cp ~/.zshrc ./zsh/zshrc
 cp ~/.config/nvim/init.vim ./neovim/
 cp ~/.config/terminator/config ./terminator/
 cp ~/.config/rofi/config ./rofi
+cp ~/torrents/scripts/* ./torrents/scripts
 
 cat <<EOF
 ---------------

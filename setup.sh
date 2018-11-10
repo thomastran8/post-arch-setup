@@ -61,7 +61,8 @@ tilix \
 xclip \
 ranger \
 noto-fonts-emoji \
-rust
+rust \
+transmission-cli
 
 # Install AUR package manager
 git clone https://aur.archlinux.org/yay.git ~/yay
