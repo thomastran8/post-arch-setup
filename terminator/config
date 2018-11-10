@@ -1,0 +1,22 @@
+[global_config]
+  title_font = DejaVuSansMono Nerd Font 12
+  title_use_system_font = False
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#1b1918"
+    cursor_color = "#a8a19f"
+    font = DejaVuSansMono Nerd Font 12
+    foreground_color = "#a8a19f"
+    palette = "#1b1918:#f22c40:#7b9726:#c38418:#407ee7:#6666ea:#3d97b8:#a8a19f:#766e6b:#f22c40:#7b9726:#c38418:#407ee7:#6666ea:#3d97b8:#f1efee"
+    scrollbar_position = hidden
+    use_system_font = False

@@ -15,6 +15,8 @@ Plug 'raimondi/delimitmate'
 Plug 'jiangmiao/auto-pairs'
 Plug 'suan/vim-instant-markdown'
 Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-repeat'
+Plug 'mattn/emmet-vim'
 
 " Make sure neovim is installed with pip3 first
 if has('nvim')
@@ -33,6 +35,13 @@ call plug#end()
 
 " Set airline icons
 let g:airline_powerline_fonts = 1
+
+" Set guide indents
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=grey19   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=grey27 ctermbg=4
 
 " For base16 vim theme
 set termguicolors

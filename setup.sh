@@ -19,9 +19,8 @@ overwrite_files()
     mkdir -p ~/.config/nvim
     cp ./neovim/init.vim ~/.config/nvim/init.vim
     cp -r ./shortcuts/xfce4 ~/.config/
-    dconf load /com/gexperts/Tilix/ < ./tilix/tilix.dconf
-    mkdir -p ~/.config/tilix/schemes
-    cp ./tilix/schemes/* ~/.config/tilix/schemes
+    mkdir -p ~/.config/terminator
+    cp ./terminator/config ~/.config/terminator/config
 }
 
 # Overwrite files

@@ -12,7 +12,7 @@ done
 cp ~/.zshrc ./zsh/zshrc
 cp ~/.config/nvim/init.vim ./neovim/
 dconf dump /com/gexperts/Tilix/ > ./tilix/tilix.dconf
-cp ~/.config/tilix/schemes/* ./tilix/schemes
+cp ~/.config/terminator/config ./terminator/
 
 cat <<EOF
 ---------------
