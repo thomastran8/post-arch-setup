@@ -38,7 +38,7 @@ fi
 
 zplug load # --verbose to see loaded modules
 
-# Aliases
+# Neovim alias
 alias nv=nvim
 
 # Tab highlighting
@@ -52,4 +52,16 @@ alias ls='ls --color=auto'
 
 # Enable fuzzy searching
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Transmission alias
+trdown()
+{
+    for tor_file in ~/torrents/tor_queue/*; do
+        transmission-remote -a $tor_file
+    done
+}
+alias trstart="transmission-daemon"
+alias trstop="pkill -f transmission-da"
+alias trst="transmission-remote -l"
+alias trcheck="ps -e | grep transmission"
 

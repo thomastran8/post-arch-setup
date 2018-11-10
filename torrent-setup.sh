@@ -13,10 +13,7 @@ cp ./torrents/scripts/* ~/torrents/scripts
 ps -e | grep transmission-da
 if [ $? -eq 0 ]; then
     echo Removing transmission daemon...
-    pkill transmission-da
-else
-    echo exiting
-    break
+    pkill -f transmission-da
 fi
 
 # Remove old config
@@ -28,7 +25,7 @@ fi
 # Generate transmission settings file
 transmission-daemon
 sleep 3
-transmission-remote --exit
+pkill -f transmission-da
 sleep 3
 
 sed -i "/\"download-dir\"/c\ \ \ \ \"download-dir\":\ \"/home/${USER}/torrents/completed\"," ~/.config/transmission-daemon/settings.json
