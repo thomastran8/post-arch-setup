@@ -14,6 +14,8 @@ cp ~/.config/nvim/init.vim ./neovim/
 cp ~/.config/terminator/config ./terminator/
 cp ~/.config/rofi/config ./rofi
 cp ~/torrents/scripts/* ./torrents/scripts
+sed -i "/ExecStart/c\ExecStart=/home/_USER_/torrents/scripts/watchdir.sh" ./torrents/scripts/watchdir.service
+sed -i "/User/c\User=_USER_" ./torrents/scripts/watchdir.service
 
 cat <<EOF
 ---------------

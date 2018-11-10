@@ -7,7 +7,16 @@ mkdir -p ~/torrents/tor_complete
 mkdir -p ~/torrents/incomplete
 mkdir -p ~/torrents/completed
 mkdir -p ~/torrents/scripts
+
+# Setup watchdir daemon
 cp ./torrents/scripts/* ~/torrents/scripts 
+sed -i "/ExecStart/c\ExecStart=/home/$USER/torrents/scripts/watchdir.sh" ~/torrents/scripts/watchdir.service
+sed -i "/User/c\User=$USER" ~/torrents/scripts/watchdir.service
+sudo systemctl stop watchdir
+sudo systemctl disable watchdir
+sudo cp ~/torrents/scripts/watchdir.service /etc/systemd/system
+sudo systemctl start watchdir
+sudo systemctl enable watchdir
 
 # Check if any transmission daemons are running
 ps -e | grep transmission-da

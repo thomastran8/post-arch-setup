@@ -62,7 +62,8 @@ xclip \
 ranger \
 noto-fonts-emoji \
 rust \
-transmission-cli
+transmission-cli \
+inotify-tools
 
 # Install AUR package manager
 git clone https://aur.archlinux.org/yay.git ~/yay

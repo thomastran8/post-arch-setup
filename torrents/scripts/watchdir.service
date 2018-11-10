@@ -1,0 +1,13 @@
+[Unit]
+Description=Moves torrent files from Downloads directiroy to torrent directory
+
+[Service]
+Type=simple
+ExecStart=/home/_USER_/torrents/scripts/watchdir.sh
+Restart=always
+RestartSec=3
+User=_USER_
+
+[Install]
+WantedBy=multi-user.target
+
