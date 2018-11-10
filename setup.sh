@@ -21,6 +21,8 @@ overwrite_files()
     cp -r ./shortcuts/xfce4 ~/.config/
     mkdir -p ~/.config/terminator
     cp ./terminator/config ~/.config/terminator/config
+    mkdir -p ~/.config/rofi
+    cp ./rofi ~/.config/rofi/config
 }
 
 # Overwrite files
