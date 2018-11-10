@@ -57,7 +57,8 @@ zsh \
 neovim \
 tilix \
 xclip \
-ranger
+ranger \
+noto-fonts-emoji
 
 # Install AUR package manager
 git clone https://aur.archlinux.org/yay.git ~/yay
