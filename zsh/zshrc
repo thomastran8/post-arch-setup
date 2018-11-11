@@ -47,8 +47,8 @@ zstyle ':completion:*' menu select
 eval "$(dircolors)"
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
-# Color the ls output
-alias ls='ls --color=auto'
+# Color the ls output and sort by directory
+alias ls='ls --color=auto --group-directories-first'
 
 # Enable fuzzy searching
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

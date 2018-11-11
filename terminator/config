@@ -2,6 +2,8 @@
   title_font = DejaVuSansMono Nerd Font 12
   title_use_system_font = False
 [keybindings]
+  next_tab = <Super>j
+  prev_tab = <Super>k
 [layouts]
   [[default]]
     [[[child1]]]

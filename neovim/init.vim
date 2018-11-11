@@ -80,3 +80,17 @@ let g:clipboard = {
             \    'cache_enabled': 1,
             \}
 
+" New leader key
+let mapleader = ";"
+
+" EASY MOTION
+" Two letter search
+nmap <Leader><Leader> <Plug>(easymotion-overwin-f2)
+" Reset easy-motion
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
+" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
