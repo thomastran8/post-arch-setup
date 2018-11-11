@@ -23,6 +23,7 @@ overwrite_files()
     cp ./terminator/config ~/.config/terminator/config
     mkdir -p ~/.config/rofi
     cp ./rofi ~/.config/rofi/config
+    mkdir -p ~/remote   # For sshfs
 }
 
 # Overwrite files
@@ -63,7 +64,8 @@ ranger \
 noto-fonts-emoji \
 rust \
 transmission-cli \
-inotify-tools
+inotify-tools \
+sshfs
 
 # Install AUR package manager
 git clone https://aur.archlinux.org/yay.git ~/yay
