@@ -71,11 +71,11 @@ let g:clipboard = {
             \    'name': 'xclip',
             \    'copy': {
             \       '*': 'xclip -selection primary',
-            \       '+': 'xclip -selection secondary',
+            \       '+': 'xclip -selection clip',
             \     },
             \    'paste': {
             \       '*': 'xclip -selection primary -o',
-            \       '+': 'xclip -selection secondary -o',
+            \       '+': 'xclip -selection clip -o',
             \    },
             \    'cache_enabled': 1,
             \}
