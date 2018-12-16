@@ -64,4 +64,5 @@ alias trstart="transmission-daemon"
 alias trstop="pkill -f transmission-da"
 alias trst="transmission-remote -l"
 alias trcheck="ps -e | grep transmission"
+alias watch="watch "
 
