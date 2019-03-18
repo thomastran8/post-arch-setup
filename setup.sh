@@ -22,7 +22,7 @@ overwrite_files()
     mkdir -p ~/.config/terminator
     cp ./terminator/config ~/.config/terminator/config
     mkdir -p ~/.config/rofi
-    cp ./rofi ~/.config/rofi/config
+    cp ./rofi/config ~/.config/rofi/config
     mkdir -p ~/remote   # For sshfs
 }
 
