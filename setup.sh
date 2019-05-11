@@ -2,7 +2,7 @@
 
 cat <<EOF
 ------------------------------------------------
-Shell script setup installer for Manjaro systems
+Shell script setup installer for Arch systems
 ------------------------------------------------
 EOF
 
@@ -88,6 +88,8 @@ zsh -c "source ~/.zshrc; zplug install; nvim +PlugInstall +qa;"
 sed -i "s/\"colorscheme/colorscheme/g" ~/.config/nvim/init.vim
 
 #TODO: reload i3
+
+#TODO: backup mpd /etc location
 
 # Default to zsh
 chsh -s $(which zsh)
