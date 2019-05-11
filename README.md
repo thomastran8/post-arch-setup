@@ -20,7 +20,7 @@ There are several steps if you want to call it your own:
 
 5. Configure your Arch system to your preferences. These are mainly dotfiles found in the user's ~/.config folder and the user's home folder. Refer to backup.sh in this repository to see which files get backed up.
 
-9. Once you are happy with your sysstem configuration, run backup.sh to backup all of your configurations.
+9. Once you are happy with your system configuration, run backup.sh to backup all of your configurations.
 
 10. Git add, commit, and push your changes to your forked repository. Your configurations are now saved. Enjoy!
 
