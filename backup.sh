@@ -7,19 +7,19 @@ cd "$(dirname "$0")"
 cp ~/.config/i3/config ./i3
 cp ~/.xinitrc ./i3/xinitrc
 # Backup polybar
-cp -r ~/.config/polybar ./polybar
+cp -r ~/.config/polybar/* ./polybar
 # Backup mpd
 cp ~/.config/mpd/mpd.conf ./mpd
 cp /etc/pulse/client.conf ./mpd
 # Backup ncmpcpp
 cp ~/.ncmpcpp/config ./ncmpcpp
-# Backup zsh .zprofile
+# Backup zsh
 cp ~/.zshrc ./zsh/zshrc
 cp ~/.zprofile ./zsh/zprofile
 # Backup dunst
-cp /.config/dunst/dunstrc ./dunst
+cp ~/.config/dunst/dunstrc ./dunst
 # Backup urxvt
-cp ~/.Xresources ./urxvt
+cp ~/.Xresources ./urxvt/Xresources
 # Backup neovim
 cp ~/.config/nvim/init.vim ./neovim
 # Backup rofi

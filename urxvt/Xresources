@@ -1,0 +1,56 @@
+! Base16 Atelier Forest
+! Scheme: Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/forest)
+
+URxvt*background:                     #1b1918
+URxvt*foreground:                     #a8a19f
+URxvt*cursorColor:                    #a8a19f
+
+URxvt*scrollColor:                    #a8a19f
+URxvt*highlightColor:                 #68615e
+URxvt*highlightTextColor:             #9c9491
+
+URxvt*color0:                         #1b1918
+URxvt*color1:                         #f22c40
+URxvt*color2:                         #7b9726
+URxvt*color3:                         #c38418
+URxvt*color4:                         #407ee7
+URxvt*color5:                         #6666ea
+URxvt*color6:                         #3d97b8
+URxvt*color7:                         #a8a19f
+URxvt*color8:                         #766e6b
+URxvt*color9:                         #f22c40
+URxvt*color10:                        #7b9726
+URxvt*color11:                        #c38418
+URxvt*color12:                        #407ee7
+URxvt*color13:                        #6666ea
+URxvt*color14:                        #3d97b8
+URxvt*color15:                        #f1efee
+
+URxvt*color16:                        #df5320
+URxvt*color17:                        #c33ff3
+URxvt*color18:                        #2c2421
+URxvt*color19:                        #68615e
+URxvt*color20:                        #9c9491
+URxvt*color21:                        #e6e2e0
+
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+! URxvt.secondaryScreen: 1
+! URxvt.secondaryScroll: 0
+
+URxvt.font: xft:DejaVuSansMono Nerd Font Mono:Book:size=10
+! URxvt.leterSpace: -1
+
+URxvt*scrollBar: false
+
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+URxvt.saveLines: 10000

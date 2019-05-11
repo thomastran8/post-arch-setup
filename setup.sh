@@ -46,7 +46,7 @@ while true; do
     read -p "Do you wish to update mirrorlists? [y/n]: " yn
     case $yn in
         [Yy]* ) sudo pacman -S reflector --noconfirm
-		reflector --latest 30 --sort rate --country "United States" --save /etc/pacman.d/mirrorlist
+		sudo reflector --latest 30 --sort rate --country "United States" --save /etc/pacman.d/mirrorlist
 		break
 		;;
         [Nn]* ) break;;

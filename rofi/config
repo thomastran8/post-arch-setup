@@ -1,6 +1,6 @@
 rofi.combi-modi:    window,drun,ssh
 rofi.theme:         android_notification
-rofi.font:          mono 12
+rofi.font:          "DejaVu Sans Mono" 12
 rofi.modi:          combi,window,drun,ssh
 rofi.show-icons:    true
 rofi.sidebar-mode:  true

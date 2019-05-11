@@ -1,0 +1,120 @@
+; Polybar
+
+[colors]
+background = #000000
+
+[bar/mybar]
+modules-left = i3 divider wired-network wireless-network divider
+modules-center = cpu memory temperature filesystem netspeed mpd
+modules-right = divider pulseaudio backlight battery date
+bottom = true
+background = ${colors.background}
+module-margin-right = 2
+font-0 = "DejaVuSansMono Nerd Font Mono:size=12;0"
+height = 32
+
+[module/date]
+type = internal/date
+interval = 1.0
+time = "%I:%M %p"
+time-alt = "%Y-%m-%d [%a]"
+format = <label>
+label = %time%
+format-foreground = #BC8F8F
+format-prefix = " "
+
+[module/backlight]
+type = internal/backlight
+card = intel_backlight
+format-prefix = " "
+format-foreground = #FFFF00
+
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_00_1f.3.analog-stereo
+use-ui-max = true
+interval = 5
+format-volume-prefix = " "
+format-volume-foreground = #FFFFF0
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC0
+poll-interval = 5
+format-charging-prefix = " "
+format-discharging-prefix = " "
+format-full-prefix = " "
+format-charging-foreground = #00ff00
+format-discharging-foreground = #00ff00
+format-full-foreground = #00ff00
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+format-prefix = " "
+format-foreground = #4169E1
+
+[module/filesystem]
+type = internal/fs
+mount-0 = /
+format-mounted = <label-mounted>
+label-mounted = %percentage_used%%
+format-mounted-prefix = " "
+format-mounted-foreground =  #999999
+
+[module/i3]
+type = internal/i3
+label-focused-background = #b20000
+label-focused-padding-right = 1
+label-unfocused-padding-right = 1
+
+[module/memory]
+type = internal/memory
+format-prefix = " "
+format-foreground = #9370DB
+
+[module/mpd]
+type = internal/mpd
+host = 127.0.0.1
+port = 6600
+format-online-foreground = #DDA0DD
+format-offline-foreground = #DDA0DD
+format-online =  <label-song> <bar-progress>
+bar-progress-width = 10
+bar-progress-indicator = |
+bar-progress-fill = ─
+bar-progress-empty = ─
+
+[module/wired-network]
+type = internal/network
+interface = enp0s20f0u2
+format-connected =  ON
+format-connected-foreground = #8FBC8F
+
+[module/wireless-network]
+type = internal/network
+interface = wlp2s0
+format-connected =  <ramp-signal>/5
+ramp-signal-0 = 0
+ramp-signal-1 = 1
+ramp-signal-2 = 2
+ramp-signal-3 = 3
+ramp-signal-4 = 4
+ramp-signal-5 = 5
+format-connected-foreground = #87CEEB
+
+[module/netspeed]
+type = custom/script
+exec = ~/.config/polybar/scripts/netspeed.sh
+tail = true
+format-foreground = #ff0000
+
+[module/temperature]
+type = internal/temperature
+format-prefix = " "
+format-foreground = #ffa500
+
+[module/divider]
+type = custom/text
+content = "|"

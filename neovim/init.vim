@@ -109,3 +109,4 @@ let g:JavaComplete_EnableDefaultMappings = 0
 " NERDTree
 map <C-m> :NERDTreeToggle<CR>
 
+set cursorline
