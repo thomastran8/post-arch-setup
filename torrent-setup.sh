@@ -7,6 +7,7 @@ mkdir -p ~/torrents/tor_complete
 mkdir -p ~/torrents/incomplete
 mkdir -p ~/torrents/completed
 mkdir -p ~/torrents/scripts
+mkdir -p ~/torrents/archive
 
 # Setup watchdir daemon
 cp ./torrents/scripts/* ~/torrents/scripts 

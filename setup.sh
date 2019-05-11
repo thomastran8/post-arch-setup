@@ -18,9 +18,8 @@ overwrite_files()
     cp ./zsh/zshrc ~/.zshrc
     mkdir -p ~/.config/nvim
     cp ./neovim/init.vim ~/.config/nvim/init.vim
-    cp -r ./shortcuts/xfce4 ~/.config/
-    mkdir -p ~/.config/terminator
-    cp ./terminator/config ~/.config/terminator/config
+    #TODO: overwrite i3 files
+    #TODO: overwrite urxvt files
     mkdir -p ~/.config/rofi
     cp ./rofi/config ~/.config/rofi/config
     mkdir -p ~/remote   # For sshfs
@@ -58,7 +57,6 @@ sudo sed -i 's/#Color/Color/g' /etc/pacman.conf
 sudo pacman -Syu --noconfirm \
 zsh \
 neovim \
-tilix \
 xclip \
 ranger \
 noto-fonts-emoji \
@@ -89,9 +87,7 @@ zsh -c "source ~/.zshrc; zplug install; nvim +PlugInstall +qa;"
 # Uncomment colorscheme in neovim init
 sed -i "s/\"colorscheme/colorscheme/g" ~/.config/nvim/init.vim
 
-# Reload xfce4
-kill -9 $(pidof xfconfd)
-kill -9 $(pidof xfsettingsd)
+#TODO: reload i3
 
 # Default to zsh
 chsh -s $(which zsh)
