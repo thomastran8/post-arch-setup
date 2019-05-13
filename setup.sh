@@ -1,5 +1,5 @@
 #!/bin/sh
-
+# UNDER CONSTRUCTION
 cat <<EOF
 ------------------------------------------------
 Shell script setup installer for Arch systems
@@ -11,9 +11,6 @@ if [[ $EUID -eq 0 ]]; then
         echo "Do not run as root."
         exit
 fi
-
-# Create directory for wallpapers
-mkdir -p ~/wallpapers/wallpaper-main
 
 overwrite_files()
 {
@@ -27,6 +24,10 @@ overwrite_files()
     mkdir -p ~/.config/rofi
     cp ./rofi/config ~/.config/rofi/config
     mkdir -p ~/remote   # For sshfs
+    # Create directory for wallpapers
+    mkdir -p ~/wallpapers/wallpaper-main
+    cp ./wallpaper/* ~/wallpapers/wallpaper-main
+
 }
 
 # Overwrite files
@@ -112,7 +113,8 @@ pacman-contrib \
 python-pip \
 npm \
 w3m \
-diffuse
+diffuse \
+rust # needed for markdown-composer
 
 # Install AUR package manager
 git clone https://aur.archlinux.org/yay.git ~/yay

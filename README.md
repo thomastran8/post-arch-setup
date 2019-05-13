@@ -1,6 +1,9 @@
 # post-arch-setup
-Script that sets up i3, Polybar, URxvt, Mpd, Ncmpcpp, Zsh, and Neovim configurations on a newly installed Arch system or backs up an existing one.
+This is a script that sets up i3, Polybar, URxvt, Mpd, Ncmpcpp, Zsh, and Neovim configurations on a newly installed Arch system or backs up an existing one.
 
+Example 1                  |  Example 2
+:-------------------------:|:-------------------------:
+![image1](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.jpg)  |  ![image2](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
 ## Usage
 Run setup.sh to deploy your configurations.
 
