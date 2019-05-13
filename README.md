@@ -29,7 +29,7 @@ There are several steps if you want to call it your own:
 ## Resources
 
 ### Base16 Color Schemes
-These are simple but effective color schemes. There's a color scheme for everyone!
+These are simple but effective color schemes. There's a color scheme for everyone! <br>
 Use the base16-builder to generate a base16 color config for your application
 
 https://github.com/base16-builder/base16-builder
