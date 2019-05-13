@@ -3,7 +3,7 @@ This is a script that sets up i3, Polybar, URxvt, Mpd, Ncmpcpp, Zsh, and Neovim 
 
 Example 1                  |  Example 2
 :-------------------------:|:-------------------------:
-![image1](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.jpg)  |  ![image2](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+![image1](https://raw.githubusercontent.com/thomastran8/post-arch-setup/master/_screenshots/image1.jpg)  |  ![image2](https://raw.githubusercontent.com/thomastran8/post-arch-setup/master/_screenshots/image2.jpg)
 ## Usage
 Run setup.sh to deploy your configurations.
 
