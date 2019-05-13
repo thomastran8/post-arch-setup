@@ -15,8 +15,8 @@ There are several steps if you want to call it your own:
 
 3. Git clone your forked repository to the Arch system.
 
-4. Run the setup.sh. This will deploy the saved configuration in this repository. <br>
-**Note**: There is a portion during Zplug install where it hangs on `==> Installation finished successfully!`. The installation will continue after this. It hangs for about a minute, do not exit or press any keys during this time.
+4. Run the setup.sh. This will deploy the saved configurations from your forked repository. Currently it will have my preferences -- but on the next step you will configure it to your own! <br>
+**Note**: There is a portion during Zplug install where it hangs on `==> Installation finished successfully!`. Don't exit out just yet! The installation will continue after this. It hangs for about a minute, so do not exit or press any keys during this time.
 
 5. Configure your Arch system to your preferences. These are mainly dotfiles found in the user's ~/.config folder and the user's home folder. Refer to backup.sh in this repository to see which files get backed up.
 
@@ -29,8 +29,8 @@ There are several steps if you want to call it your own:
 ## Resources
 
 ### Base16 Color Schemes
-These are simple but effective color schemes. There's a color scheme for everyone! <br>
-Use the base16-builder to generate a base16 color config for your application
+These are simple but effective color schemes. There's a color scheme for everyone with base16! <br>
+Use the base16-builder to generate a base16 color config for your target application.
 
 https://github.com/base16-builder/base16-builder
 
@@ -43,3 +43,8 @@ https://github.com/zplug/zplug
 https://github.com/junegunn/vim-plug
 
 https://vimawesome.com/
+
+### Wallpaper
+These are some awesome free minimalistic desktop wallpapers. For personal use only.
+
+http://simpledesktops.com/
