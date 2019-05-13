@@ -111,7 +111,8 @@ sshfs \
 pacman-contrib \
 python-pip \
 npm \
-w3m
+w3m \
+diffuse
 
 # Install AUR package manager
 git clone https://aur.archlinux.org/yay.git ~/yay

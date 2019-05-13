@@ -25,9 +25,10 @@ zplug "plugins/colored-man-pages",   from:oh-my-zsh
 zplug "robbyrussell/oh-my-zsh",   use:lib/history.zsh, from:github, as:plugin
 zplug "MichaelAquilina/zsh-you-should-use"
 
-# Theme
+# Zsh prompt
 zplug "geometry-zsh/geometry"
 GEOMETRY_PROMPT_PREFIX=""
+GEOMETRY_PROMPT_PLUGINS=(virtualenv exec_time git)
 
 # Install packages that have not been installed yet
 if ! zplug check --verbose; then
