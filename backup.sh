@@ -24,6 +24,8 @@ cp ~/.Xresources ./urxvt/Xresources
 cp ~/.config/nvim/init.vim ./neovim
 # Backup rofi
 cp ~/.config/rofi/config ./rofi
+# Backup ranger
+cp ~/.config/ranger/rc.conf ./ranger
 # Backup torrent scripts
 cp ~/torrents/scripts/* ./torrents/scripts
 sed -i "/ExecStart/c\ExecStart=/home/_USER_/torrents/scripts/watchdir.sh" ./torrents/scripts/watchdir.service

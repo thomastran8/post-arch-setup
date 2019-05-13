@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 while true
 do
     ethernet_dir="/sys/class/net/enp*"

@@ -6,11 +6,12 @@ background = #000000
 [bar/mybar]
 modules-left = i3 divider wired-network wireless-network divider
 modules-center = cpu memory temperature filesystem netspeed mpd
-modules-right = divider pulseaudio backlight battery date
+modules-right = divider updates-arch-combined pulseaudio backlight battery date
+tray-position = right
 bottom = true
 background = ${colors.background}
 module-margin-right = 2
-font-0 = "DejaVuSansMono Nerd Font Mono:size=12;0"
+font-0 = "DejaVuSansMono Nerd Font Mono:pixelsize=12;3"
 height = 32
 
 [module/date]
@@ -20,7 +21,7 @@ time = "%I:%M %p"
 time-alt = "%Y-%m-%d [%a]"
 format = <label>
 label = %time%
-format-foreground = #BC8F8F
+format-foreground = #deb887
 format-prefix = " "
 
 [module/backlight]
@@ -90,7 +91,7 @@ bar-progress-empty = ─
 type = internal/network
 interface = enp0s20f0u2
 format-connected =  ON
-format-connected-foreground = #8FBC8F
+format-connected-foreground = #adff2f
 
 [module/wireless-network]
 type = internal/network
@@ -102,7 +103,7 @@ ramp-signal-2 = 2
 ramp-signal-3 = 3
 ramp-signal-4 = 4
 ramp-signal-5 = 5
-format-connected-foreground = #87CEEB
+format-connected-foreground = #00FFFF
 
 [module/netspeed]
 type = custom/script
@@ -118,3 +119,10 @@ format-foreground = #ffa500
 [module/divider]
 type = custom/text
 content = "|"
+
+[module/updates-arch-combined]
+type = custom/script
+exec = ~/.config/polybar/scripts/updates-arch-combined.sh
+interval = 600
+format-foreground = #008080
+

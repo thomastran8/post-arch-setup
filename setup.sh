@@ -12,6 +12,9 @@ if [[ $EUID -eq 0 ]]; then
         exit
 fi
 
+# Create directory for wallpapers
+mkdir -p ~/wallpapers/wallpaper-main
+
 overwrite_files()
 {
     # Copy files to corresponding directories
@@ -105,8 +108,10 @@ xclip \
 transmission-cli \
 inotify-tools \
 sshfs \
-pacman-contrib
-#rust \
+pacman-contrib \
+python-pip \
+npm \
+w3m
 
 # Install AUR package manager
 git clone https://aur.archlinux.org/yay.git ~/yay
@@ -124,10 +129,12 @@ systemd-numlockontty \
 polybar \
 cryptomator \
 megasync \
-rxvt-unicode-pixbuf \
+rxvt-unicode-truecolor \
 light \
 fontviewer \
-spotify
+spotify \
+neovim-plug \
+nodejs-base16-builder-git
 
 # Install python modules for neovim
 pip3 install neovim --user
@@ -139,7 +146,8 @@ zsh -c "source ~/.zshrc; zplug install; nvim +PlugInstall +qa;"
 sed -i "s/\"colorscheme/colorscheme/g" ~/.config/nvim/init.vim
 
 #TODO: reload i3
-
+#TODO: pip3 install --user --upgrade pynvim
+#TODO: sudo npm install --global base16-builder
 
 # Default to zsh
 chsh -s $(which zsh)
