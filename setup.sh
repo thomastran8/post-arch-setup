@@ -104,7 +104,8 @@ libmpdclient \ # install before polybar
 xclip \
 transmission-cli \
 inotify-tools \
-sshfs
+sshfs \
+pacman-contrib
 #rust \
 
 # Install AUR package manager
@@ -125,7 +126,8 @@ cryptomator \
 megasync \
 rxvt-unicode-pixbuf \
 light \
-fontviewer
+fontviewer \
+spotify
 
 # Install python modules for neovim
 pip3 install neovim --user
