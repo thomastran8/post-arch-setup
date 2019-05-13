@@ -45,6 +45,6 @@ https://github.com/junegunn/vim-plug
 https://vimawesome.com/
 
 ### Wallpaper
-These are some great minimal free desktop wallpapers. For personal use only.
+These are some awesome free minimalistic desktop wallpapers. For personal use only.
 
 http://simpledesktops.com/
