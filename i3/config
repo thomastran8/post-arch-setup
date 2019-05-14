@@ -198,6 +198,9 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym --release Print exec --no-startup-id scrot ~/Pictures/$(date +'%F_%T').jpg
 bindsym --release Shift+Print exec --no-startup-id scrot -s ~/Pictures/$(date +'%F_%T').jpg
 
+# poweroff
+bindsym $mod+Shift+z exec --no-startup-id poweroff
+
 # music player
 bindsym $mod+m exec urxvt -e ncmpcpp
 
