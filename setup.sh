@@ -114,7 +114,8 @@ python-pip \
 npm \
 w3m \
 diffuse \
-rust # needed for markdown-composer
+rust \ # needed for markdown-composer
+keepassxc
 
 # Install AUR package manager
 git clone https://aur.archlinux.org/yay.git ~/yay
