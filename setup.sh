@@ -115,7 +115,8 @@ npm \
 w3m \
 diffuse \
 rust \ # needed for markdown-composer
-keepassxc
+keepassxc \
+unzip
 
 # Install AUR package manager
 git clone https://aur.archlinux.org/yay.git ~/yay
