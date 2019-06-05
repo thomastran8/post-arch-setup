@@ -116,7 +116,8 @@ w3m \
 diffuse \
 rust \ # needed for markdown-composer
 keepassxc \
-unzip
+unzip \
+jdk-openjdk
 
 # Install AUR package manager
 git clone https://aur.archlinux.org/yay.git ~/yay
